@@ -1,0 +1,59 @@
+#container {
+  display: inline-flex;
+  /*flex-direction: column; 
+  justify-content: space-between;
+  background-color: #E0FFFF ;
+  margin: 0 10px 20px 10px;*/
+}
+
+.body {
+display: flex;
+justify-content: space-between;
+flex-direction: column; 
+  
+  background-color: #E0FFFF ;
+  margin: 0 10px 20px 10px;
+
+}
+
+.addBooks {
+  justify-content: space-between;
+}
+
+.allthebooks {
+  
+    float: right;
+    
+    background-color: lime;
+    font-family: arial black; 
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;   
+}
+
+.bookLogger {
+ 
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px 0 10px;
+
+}
+
+.roomList {
+  
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px 0 10px;
+   
+}
+
+.search {
+  display:inline-block;
+  float: down;
+  justify-content: space-around;
+  align-self: flex-end;
+  margin-bottom: 1em;
+}
+
+
+
