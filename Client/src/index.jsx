@@ -38,6 +38,9 @@ class BookLogger extends React.Component {
     var roomName = this.state.selectOption;
     var author = this.state.bookauthor;
     var booktitle = this.state.booktitle;
+    this.setState({booktitle: ''});
+    this.setState({bookauthor: ''});
+    this.setState({selectOption: ''});
     this.sendInfoToServer(roomName, author, booktitle);
 
   }
@@ -60,6 +63,7 @@ class BookLogger extends React.Component {
         contentType: 'application/json', 
         success: (result) => {
           console.log('success');
+
         },
         failure: function(err) {
           if (err) {

@@ -75,8 +75,10 @@ app.post('/add/book', function(req, res){
               var insertBook = util.format('INSERT INTO books (booktitle, authorid, roomid) VALUES ("%s", %d, %d)', booktitle, authorid, roomid);
               db.query(insertBook, function(err, results){
                 var claimBook = results.insertId;
-                db.query('SELECT books.booktitle FROM books WHERE books')
-                res.send();
+                var q = util.format('SELECT books.booktitle FROM books WHERE books.id = %d', claimBook);
+                db.query(q, ((err, results)=>{
+                  res.send();
+                }))
               });
             } else {
               res.send();
